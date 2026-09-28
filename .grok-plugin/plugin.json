@@ -1,0 +1,16 @@
+{
+  "name": "lemma-telepath",
+  "version": "1.0.0",
+  "description": "Telegram Business inside Grok Build via the hosted MCP at telepath.lemma.company. Search your chat archive, read the files and transcribed voice in it, and reply as yourself. Sign in with Telegram on first connect.",
+  "author": {
+    "name": "lemma",
+    "url": "https://lemma.company"
+  },
+  "homepage": "https://telepath.lemma.company",
+  "license": "Proprietary",
+  "keywords": [
+    "telepath",
+    "lemma telepath",
+    "telepath telegram"
+  ]
+}
