@@ -23,6 +23,7 @@ plugin. Nothing in this repository runs on your machine or handles your messages
 |---|---|
 | `plugin.json` | Agent Plugins clients |
 | `.cursor-plugin/plugin.json` | Cursor |
+| `gemini-extension.json` | Gemini CLI |
 | `mcp.json` | both of the above, for the server address |
 | `.grok-plugin/plugin.json` | Grok Build |
 | `.mcp.json` | Grok Build, for the server address |
@@ -35,6 +36,8 @@ reads. Change the address in both or in neither.
 ## Installing
 
 **Cursor** — install **lemma-telepath** from the marketplace.
+
+**Gemini CLI** — `gemini extensions install https://github.com/Lemma-Company/telepath-plugin`
 
 **Grok Build** — open `/plugin`, search for **lemma-telepath**, install.
 

@@ -1,0 +1,11 @@
+{
+  "name": "lemma-telepath",
+  "version": "1.0.0",
+  "description": "Connect your Telegram Business account: search the whole chat archive, read the documents, photos and transcribed voice messages inside it, and reply as yourself.",
+  "mcpServers": {
+    "telepath": {
+      "httpUrl": "https://telepath.lemma.company/mcp",
+      "description": "Telepath — your own Telegram Business conversations, over a hosted MCP server."
+    }
+  }
+}
