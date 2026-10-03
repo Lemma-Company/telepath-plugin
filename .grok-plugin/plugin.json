@@ -7,7 +7,7 @@
     "url": "https://lemma.company"
   },
   "homepage": "https://telepath.lemma.company",
-  "license": "Proprietary",
+  "license": "MIT",
   "keywords": [
     "telepath",
     "lemma telepath",

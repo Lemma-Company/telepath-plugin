@@ -1,0 +1,21 @@
+{
+  "name": "lemma-telepath",
+  "version": "1.0.0",
+  "description": "Search your Telegram Business archive, read what a voice message said, and reply — through a hosted MCP server.",
+  "author": {
+    "name": "Lemma",
+    "email": "hello@lemma.company"
+  },
+  "homepage": "https://telepath.lemma.company",
+  "repository": "https://github.com/Lemma-Company/telepath-plugin",
+  "license": "MIT",
+  "keywords": [
+    "telegram",
+    "telegram business",
+    "messages",
+    "transcription",
+    "inbox"
+  ],
+  "logo": "../assets/logo.png",
+  "mcpServers": "../mcp.json"
+}
