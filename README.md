@@ -17,22 +17,6 @@ assets only: they point an assistant at the hosted Lemma Telepath MCP service at
 The hosted service is operated by Lemma and is not distributed as part of this
 plugin. Nothing in this repository runs on your machine or handles your messages.
 
-## Layout
-
-| File | Read by |
-|---|---|
-| `plugin.json` | Agent Plugins clients |
-| `.cursor-plugin/plugin.json` | Cursor |
-| `gemini-extension.json` | Gemini CLI |
-| `mcp.json` | both of the above, for the server address |
-| `.grok-plugin/plugin.json` | Grok Build |
-| `.mcp.json` | Grok Build, for the server address |
-| `assets/logo.png` | listings |
-
-The two MCP files hold the same server address under the two names different
-hosts look for; `mcp.json` is the Agent Plugins name, `.mcp.json` the one Grok
-reads. Change the address in both or in neither.
-
 ## Installing
 
 **Cursor** — install **lemma-telepath** from the marketplace.
@@ -41,7 +25,16 @@ reads. Change the address in both or in neither.
 
 **Grok Build** — open `/plugin`, search for **lemma-telepath**, install.
 
-**Claude** — connect from the [directory listing](https://claude.ai/directory/lemma-telepath).
+**Claude Code** —
+
+```
+claude plugin marketplace add Lemma-Company/telepath-plugin
+claude plugin install lemma-telepath@lemma
+```
+
+**Claude apps** — connect from the [directory listing](https://claude.ai/directory/lemma-telepath).
+
+**Cline** — `cline mcp install lemma-telepath --transport http https://telepath.lemma.company/mcp`
 
 **ChatGPT and other MCP clients** — add
 `https://telepath.lemma.company/mcp` as a connector.
