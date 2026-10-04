@@ -1,0 +1,16 @@
+{
+  "name": "lemma",
+  "description": "Lemma's own plugins. Telepath connects your existing Telegram conversations to Claude over a hosted MCP server.",
+  "owner": {
+    "name": "Lemma",
+    "email": "hello@lemma.company",
+    "url": "https://lemma.company"
+  },
+  "plugins": [
+    {
+      "name": "lemma-telepath",
+      "source": "./",
+      "description": "Your existing Telegram conversations, readable by Claude: search the archive, read the documents, photos and transcribed voice inside it, and reply as yourself — over a hosted MCP server."
+    }
+  ]
+}

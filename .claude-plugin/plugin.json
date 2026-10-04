@@ -1,0 +1,21 @@
+{
+  "name": "lemma-telepath",
+  "displayName": "Telepath",
+  "version": "1.0.0",
+  "description": "Your existing Telegram conversations, readable by Claude: search the archive, read the documents, photos and transcribed voice inside it, and reply as yourself — over a hosted MCP server.",
+  "author": {
+    "name": "Lemma",
+    "email": "hello@lemma.company",
+    "url": "https://lemma.company"
+  },
+  "homepage": "https://telepath.lemma.company",
+  "repository": "https://github.com/Lemma-Company/telepath-plugin",
+  "license": "MIT",
+  "keywords": [
+    "telegram",
+    "telegram archive",
+    "messages",
+    "transcription",
+    "inbox"
+  ]
+}
