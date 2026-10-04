@@ -17,5 +17,10 @@
     "messages",
     "transcription",
     "inbox"
-  ]
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://telepath.lemma.company/start",
+  "supportUrl": "https://telepath.lemma.company/support",
+  "privacyPolicyUrl": "https://telepath.lemma.company/privacy",
+  "termsOfServiceUrl": "https://telepath.lemma.company/terms"
 }
