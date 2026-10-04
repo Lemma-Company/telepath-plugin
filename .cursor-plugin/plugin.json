@@ -1,7 +1,7 @@
 {
   "name": "lemma-telepath",
   "version": "1.0.0",
-  "description": "Search your Telegram Business archive, read what a voice message said, and reply — through a hosted MCP server.",
+  "description": "Search your Telegram archive, read what a voice message said, and reply — through a hosted MCP server.",
   "author": {
     "name": "Lemma",
     "email": "hello@lemma.company"

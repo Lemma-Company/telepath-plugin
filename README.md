@@ -1,12 +1,12 @@
 # Lemma Telepath — plugin package
 
-Connect your own [Telegram Business](https://telepath.lemma.company) account to
+Connect your own [Telegram](https://telepath.lemma.company) account to
 an AI assistant: search the whole chat archive, read the documents, photos and
 transcribed voice messages inside it, and reply as yourself.
 
-Telepath runs on the official Telegram Business API — a bot you add to your own
-account — not on an MTProto user session, so nothing here logs in as you.
-Connecting a business bot does not require Telegram Premium.
+Telepath runs on Telegram's official business-bot API — a bot you add to your
+own account — not on an MTProto user session, so nothing here logs in as you.
+It needs no Telegram Premium: connecting a bot is open to every account.
 
 ## What this repository is
 
@@ -53,7 +53,8 @@ invent. The full walkthrough, with screenshots, is at
 
 ## Before you connect
 
-You add our bot in Telegram under **Settings → Telegram Business → Chatbots**
+You add our bot in Telegram under **Settings → My Account → Chat automation**
+(**Telegram Business → Chatbots** on Premium)
 and choose which conversations it may access. Messages are archived from that
 moment on; removing the bot stops it. Every capability is a switch you control
 from the bot itself, and `/deletedata` erases everything we hold for you.
