@@ -17,7 +17,20 @@ assets only: they point an assistant at the hosted Lemma Telepath MCP service at
 The hosted service is operated by Lemma and is not distributed as part of this
 plugin. Nothing in this repository runs on your machine or handles your messages.
 
-## Installing
+## Step 1 — add the bot in Telegram
+
+**Do this first.** Without it the assistant connects to an archive with nothing
+in it, which is the single most common way this goes wrong.
+
+You add our bot in Telegram under **Settings → My Account → Chat automation**
+(**Telegram Business → Chatbots** on Premium)
+and choose which conversations it may access. Messages are archived from that
+moment on; removing the bot stops it. Every capability is a switch you control
+from the bot itself, and `/deletedata` erases everything we hold for you.
+
+Step by step, with screenshots: [telepath.lemma.company/start](https://telepath.lemma.company/start)
+
+## Step 2 — connect your assistant
 
 **Cursor** — install **lemma-telepath** from the marketplace.
 
@@ -44,13 +57,7 @@ Telegram. That is what tells us which archive is yours; there is no password to
 invent. The full walkthrough, with screenshots, is at
 [telepath.lemma.company/start](https://telepath.lemma.company/start).
 
-## Before you connect
-
-You add our bot in Telegram under **Settings → My Account → Chat automation**
-(**Telegram Business → Chatbots** on Premium)
-and choose which conversations it may access. Messages are archived from that
-moment on; removing the bot stops it. Every capability is a switch you control
-from the bot itself, and `/deletedata` erases everything we hold for you.
+## Honest limits
 
 Telepath is not end-to-end encrypted: searching and transcribing require our
 servers to read your messages. Each account's archive is a separate database on
