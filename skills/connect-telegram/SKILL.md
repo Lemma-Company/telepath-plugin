@@ -1,6 +1,6 @@
 ---
 name: connect-telegram
-description: Set up or repair the user's Telegram connection for Telepath, then answer what they actually asked. Use whenever they ask about their Telegram messages, chats, voice notes or files; mention Telegram, Телеграм or переписка; or when a Telepath tool is unavailable, returns nothing, or asks for authentication.
+description: Set up or repair the user's Telegram connection for Telepath, then answer what they actually asked. Use whenever they ask about their Telegram messages, chats, voice notes or files; mention Telegram, Телеграм or переписка; or when a Telepath tool is unavailable, asks for authentication, or reports no chats at all. Not for a search that simply found nothing — that is an ordinary empty result, not a setup problem.
 ---
 
 # Connecting Telegram to Telepath
@@ -10,8 +10,19 @@ halves, and a half-connected setup looks exactly like an empty inbox — which i
 why this skill exists. Work out which half is missing, fix that one, then go back
 and do what the user originally asked.
 
-**Do not stop at "you're connected now."** The user asked a question. Setup is
-the detour, not the destination.
+**First, make sure anything is actually broken.** If the Telepath tools work and
+return chats, this skill has nothing to do: use them and answer. A search that
+found nothing is an ordinary empty result — a connected archive with no match
+for *this* query — not a setup problem. Walking a working user through setup is
+worse than saying "nothing found", because it tells them something is wrong when
+nothing is.
+
+What does mean setup is incomplete: the tools are missing, they report an
+authentication error, or they report **no chats at all**. Zero chats is not a
+failed search; it means there is nothing to search.
+
+**And do not stop at "you're connected now."** The user asked a question. Setup
+is the detour, not the destination.
 
 ## Step 1 — is the connector authenticated?
 
@@ -72,7 +83,3 @@ this. If the user asked what Yulia wrote, resolve the name with
 `telegram_find_chat`, then read it with `telegram_get_messages`. Do not make them
 ask a second time.
 
-## When nothing is wrong
-
-If the tools already work and return chats, this skill has nothing to do: use the
-tools and answer. Never walk a connected user through setup.
