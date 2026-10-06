@@ -57,6 +57,11 @@ Telegram. That is what tells us which archive is yours; there is no password to
 invent. The full walkthrough, with screenshots, is at
 [telepath.lemma.company/start](https://telepath.lemma.company/start).
 
+If you install the plugin and get to this later, you do not have to remember any
+of it. Ask your assistant about your Telegram messages and it will pick the
+setup up from wherever you left off, or run `/lemma-telepath:connect-telegram`
+to start it yourself.
+
 ## Honest limits
 
 Telepath is not end-to-end encrypted: searching and transcribing require our
