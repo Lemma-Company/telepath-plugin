@@ -21,9 +21,12 @@ Call a cheap Telepath tool, such as `telegram_list_chats`.
 error**, the connector is installed but not signed in. Say so briefly and give
 the path for where the user is:
 
+- **Claude app and Cowork**: **Customize → Plugins → Telepath → Connectors**,
+  then **Connect**. Name that path exactly. A connector that ships with a plugin
+  is listed on that plugin's own Connectors tab, *not* in the general connector
+  settings, and someone sent to the general list does not find Telepath there
+  and concludes the plugin is broken.
 - **Claude Code**: run `/mcp`, pick **telepath**, and follow the browser.
-- **Claude app, Cowork, or anywhere else**: open the connector settings and
-  connect **Telepath**; a browser window opens.
 
 Signing in is a Telegram login — there is no password to invent. It is what tells
 the server whose archive this is. Wait for the user to say they are done, then
@@ -39,15 +42,21 @@ Tell them, in their own language, to open Telegram and do this once:
 
 > **Settings → My Account → Chat automation** → add **@lemma_telepath_bot**
 
-Worth adding, briefly, only where it helps:
+Add at most two of these, and only when they answer something the user is
+actually facing. Someone who has connected nothing yet does not need to hear
+about group chats and history imports — a wall of options at step one is how
+people give up.
 
 - It is available on **every** Telegram account — no Premium, no paid plan.
+  Worth saying up front: most people assume this costs money.
 - By default the bot gets **all** private chats. Anything excluded under
-  *Chats the bot can access* never reaches the server at all.
-- Archiving starts **from that moment**. Earlier history is not imported unless
-  they ask for it: `/import` in the bot walks through a Telegram Desktop export.
-- Groups work separately: add the bot to a group, then write one message there
-  yourself to claim it.
+  *Chats the bot can access* never reaches the server at all. Say this when
+  they ask what is shared, or hesitate about privacy.
+- Archiving starts **from that moment**. Say this when they ask about old
+  messages, or search for something older and find nothing. Then, and only
+  then, `/import` in the bot takes a Telegram Desktop export.
+- Groups are separate: add the bot to the group, then write one message there
+  yourself. Say this only when they ask about a group.
 - Step by step with pictures: https://telepath.lemma.company/start
 
 The bot sends a confirmation in Telegram once it connects. That is the signal

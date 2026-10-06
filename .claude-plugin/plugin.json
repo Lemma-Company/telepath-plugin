@@ -1,7 +1,7 @@
 {
   "name": "lemma-telepath",
   "displayName": "Telepath",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Your existing Telegram conversations, readable by Claude: search the archive, read the documents, photos and transcribed voice inside it, and reply as yourself — over a hosted MCP server. One setup step in Telegram: Settings → My Account → Chat automation → add @lemma_telepath_bot. Open to every account — no Premium.",
   "author": {
     "name": "Lemma",
