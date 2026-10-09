@@ -4,9 +4,20 @@ Connect your own [Telegram](https://telepath.lemma.company) account to
 an AI assistant: search the whole chat archive, read the documents, photos and
 transcribed voice messages inside it, and reply as yourself.
 
+**Two steps, both free.**
+
+1. **Connect the connector** —
+   [claude.ai/directory/lemma-telepath](https://claude.ai/directory/lemma-telepath)
+   → **Connect**, then sign in with Telegram. Installing the plugin does not do
+   this: the connector ships with it, but stays switched off until you connect it.
+   In other clients, see [Step 2](#step-2--connect-your-assistant) below.
+2. **Add the bot in Telegram** — **Settings → My Account → Chat automation** →
+   add **@lemma_telepath_bot**. Open to every account, no Premium.
+
+Until both are done, the assistant opens an archive with nothing in it.
+
 Telepath runs on Telegram's official business-bot API — a bot you add to your
 own account — not on an MTProto user session, so nothing here logs in as you.
-It needs no Telegram Premium: connecting a bot is open to every account.
 
 ## What this repository is
 
