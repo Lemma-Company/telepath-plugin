@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lemma-telepath",
-  "version": "1.2.1",
-  "description": "Your existing Telegram, readable by Claude: search the archive, read the documents, photos and transcribed voice inside it, and reply as yourself. Two things make it work, both free: connect the bundled Telepath connector, and add @lemma_telepath_bot in Telegram under Settings → My Account → Chat automation. Works on every account — no Premium.",
+  "version": "1.2.0",
+  "description": "Search your Telegram archive, read what a voice message said, and reply — through a hosted MCP server.",
   "author": {
     "name": "Lemma",
     "url": "https://lemma.company"
