@@ -10,7 +10,7 @@
     {
       "name": "lemma-telepath",
       "source": "./",
-      "description": "Your existing Telegram conversations, readable by Claude: search the archive, read the documents, photos and transcribed voice inside it, and reply as yourself — over a hosted MCP server. One setup step in Telegram: Settings → My Account → Chat automation → add @lemma_telepath_bot. Open to every account — no Premium."
+      "description": "Your existing Telegram, readable by Claude: search the archive, read the documents, photos and transcribed voice inside it, and reply as yourself. Two things make it work, both free: connect the bundled Telepath connector, and add @lemma_telepath_bot in Telegram under Settings → My Account → Chat automation. Works on every account — no Premium."
     }
   ]
 }
