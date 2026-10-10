@@ -35,8 +35,9 @@ in it, which is the single most common way this goes wrong.
 
 You add our bot in Telegram under **Settings → My Account → Chat automation**
 (**Telegram Business → Chatbots** on Premium)
-and choose which conversations it may access. Messages are archived from that
-moment on; removing the bot stops it. Every capability is a switch you control
+and it covers all your private chats by default — anything you exclude under
+**Chats the bot can access** never reaches us at all. Messages are archived from
+that moment on; removing the bot stops it. Every capability is a switch you control
 from the bot itself, and `/deletedata` erases everything we hold for you.
 
 Step by step, with screenshots: [telepath.lemma.company/start](https://telepath.lemma.company/start)
