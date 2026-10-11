@@ -1,6 +1,6 @@
 ---
 name: conversation-brief
-description: Read through one person's Telegram conversation and report what it amounts to — what they asked, what was agreed, what is still open. Use when the user names someone and wants the thread rather than a list: "what did Oleg write", "what's the state with Anna", "о чём мы договорились с Иваном", "catch me up on this chat".
+description: Read through one person's Telegram conversation and report what it amounts to — what they asked, what was agreed, what is still open. Use when the user names someone and wants the thread rather than a list — "what did Oleg write", "what's the state with Anna", "о чём мы договорились с Иваном", "catch me up on this chat".
 ---
 
 # One conversation, read properly
