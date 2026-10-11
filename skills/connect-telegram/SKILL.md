@@ -32,14 +32,15 @@ Call a cheap Telepath tool, such as `telegram_list_chats`.
 error**, the connector is installed but not signed in. Say so briefly and give
 the path for where the user is:
 
-- **Claude app and Cowork**: **Customize → Plugins → Telepath → Connectors**.
-  The connector shows one of two states there, and which one decides the step:
-  **Not added** needs **Add** first and then **Connect**; **Not connected**
-  needs only **Connect**. Say both, because installing the plugin adds neither
-  the connector nor a sign-in, and a user who only hears "Connect" and sees no
-  such button concludes the plugin is broken. Name the path exactly: a
-  connector that ships with a plugin lives on that plugin's own Connectors tab,
-  *not* in the general connector settings.
+- **Claude app and Cowork**: **Customize → Plugins → Telepath → Connectors**,
+  then **Connect**. Name that path exactly: the connector that ships with a
+  plugin lives on that plugin's own Connectors tab, not in the general
+  connector settings, and nothing prompts them to open it — which is why most
+  people who install the plugin never connect anything.
+  On a Team or Enterprise plan the connector may instead read **Not added**,
+  and only an organization Owner can add it; the user then connects it with
+  their own account afterwards. Mention that only if they say there is no
+  **Connect** button.
 - **Claude Code**: run `/mcp`, pick **telepath**, and follow the browser.
 
 Signing in is a Telegram login — there is no password to invent. It is what tells
