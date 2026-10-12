@@ -32,15 +32,20 @@ Call a cheap Telepath tool, such as `telegram_list_chats`.
 error**, the connector is installed but not signed in. Say so briefly and give
 the path for where the user is:
 
-- **Claude app and Cowork**: **Customize → Plugins → Telepath → Connectors**,
-  then **Connect**. Name that path exactly: the connector that ships with a
-  plugin lives on that plugin's own Connectors tab, not in the general
-  connector settings, and nothing prompts them to open it — which is why most
-  people who install the plugin never connect anything.
-  On a Team or Enterprise plan the connector may instead read **Not added**,
-  and only an organization Owner can add it; the user then connects it with
-  their own account afterwards. Mention that only if they say there is no
-  **Connect** button.
+- **Claude app and Cowork**: send them to the connector's own listing,
+  https://claude.ai/directory/lemma-telepath → **Connect to Claude** → sign in
+  with Telegram. That is one button, and it works whether or not the plugin is
+  installed. Offer this first — the in-app route is five steps and is where
+  most people stop.
+  Only if they would rather stay in the app: **Customize → Plugins → Telepath
+  → Connectors**. The connector there reads **Not added** with a **Connect**
+  button; pressing it opens *Add custom connector* with the name and address
+  already filled in — **Continue**, then **Add** on the next screen, leaving
+  *Register automatically* selected as it is. The Telegram sign-in opens after
+  that. Nothing in the app ever points at that tab, which is why installing the
+  plugin on its own connects nothing.
+  On Team or Enterprise an organization Owner has to add the connector before
+  anyone can connect it.
 - **Claude Code**: run `/mcp`, pick **telepath**, and follow the browser.
 
 Signing in is a Telegram login — there is no password to invent. It is what tells

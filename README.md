@@ -6,10 +6,12 @@ transcribed voice messages inside it, and reply as yourself.
 
 **Two steps, both free.**
 
-1. **Connect the connector** —
+1. **Connect the connector first** —
    [claude.ai/directory/lemma-telepath](https://claude.ai/directory/lemma-telepath)
-   → **Connect**, then sign in with Telegram. Installing the plugin does not do
-   this: the connector ships with it, but stays switched off until you connect it.
+   → **Connect to Claude**, then sign in with Telegram. That is one button. Add
+   the plugin afterwards, for the skills: installing it connects nothing on its
+   own, and the connector it carries waits under **Customize → Plugins →
+   Telepath → Connectors** reading **Not added**, behind a longer dialog.
    In other clients, see [Step 2](#step-2--connect-your-assistant) below.
 2. **Add the bot in Telegram** — **Settings → My Account → Chat automation** →
    add **@lemma_telepath_bot**. Open to every account, no Premium.
@@ -57,7 +59,10 @@ claude plugin marketplace add Lemma-Company/telepath-plugin
 claude plugin install lemma-telepath@lemma
 ```
 
-**Claude apps** — connect from the [directory listing](https://claude.ai/directory/lemma-telepath).
+**Claude apps** — press **Connect to Claude** on the
+[connector listing](https://claude.ai/directory/lemma-telepath). The plugin is a
+separate, optional install that adds the skills; it does not connect the
+connector for you.
 
 **Cline** — `cline mcp install lemma-telepath --transport http https://telepath.lemma.company/mcp`
 
