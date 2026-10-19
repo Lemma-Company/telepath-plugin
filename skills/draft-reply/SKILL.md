@@ -52,8 +52,9 @@ Two cases worth saying out loud when they apply:
   bot rather than as the user. Say so before sending, because it changes who the
   group sees talking.
 - **A connection with no reply permission** can't send at all. The tool says so;
-  pass it on with the fix — *Settings → My Account → Chat automation*, where the
-  reply right is granted — rather than retrying.
+  pass it on with the fix — the reply right is granted where the bot was added,
+  and the **connect-telegram** skill carries that path for mobile and desktop
+  both — rather than retrying.
 
 ## After sending
 

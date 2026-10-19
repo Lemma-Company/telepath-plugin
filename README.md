@@ -13,8 +13,9 @@ transcribed voice messages inside it, and reply as yourself.
    own, and the connector it carries waits under **Customize → Plugins →
    Telepath → Connectors** reading **Not added**, behind a longer dialog.
    In other clients, see [Step 2](#step-2--connect-your-assistant) below.
-2. **Add the bot in Telegram** — **Settings → My Account → Chat automation** →
-   add **@lemma_telepath_bot**. Open to every account, no Premium.
+2. **Add the bot in Telegram** — **Settings → My Account → Chat automation**,
+   or on desktop **Settings → Edit profile → Chat automation** → add
+   **@lemma_telepath_bot**. Open to every account, no Premium.
 
 Until both are done, the assistant opens an archive with nothing in it.
 
@@ -36,7 +37,7 @@ plugin. Nothing in this repository runs on your machine or handles your messages
 in it, which is the single most common way this goes wrong.
 
 You add our bot in Telegram under **Settings → My Account → Chat automation**
-(**Telegram Business → Chatbots** on Premium)
+— on desktop, **Settings → Edit profile → Chat automation** —
 and it covers all your private chats by default — anything you exclude under
 **Chats the bot can access** never reaches us at all. Messages are archived from
 that moment on; removing the bot stops it. Every capability is a switch you control

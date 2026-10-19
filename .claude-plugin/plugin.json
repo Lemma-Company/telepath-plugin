@@ -1,8 +1,8 @@
 {
   "name": "lemma-telepath",
   "displayName": "Telepath for Telegram",
-  "version": "1.2.4",
-  "description": "Your existing Telegram, readable by Claude: search the archive, read the documents, photos and transcribed voice inside it, and reply as yourself. Two steps, both free: connect the Telepath connector in Claude, and add @lemma_telepath_bot in Telegram under Settings → My Account → Chat automation. Open to every account — no Premium.",
+  "version": "1.2.5",
+  "description": "Your existing Telegram, readable by Claude: search the archive, read the documents, photos and transcribed voice inside it, and reply as yourself. Two steps, both free: connect the Telepath connector in Claude, and add @lemma_telepath_bot in Telegram under Settings → My Account → Chat automation (on desktop: Settings → Edit profile → Chat automation). Group chats the bot is in are archived too. Open to every account — no Premium.",
   "author": {
     "name": "Lemma",
     "email": "hello@lemma.company",

@@ -60,7 +60,14 @@ should have messages comes back empty, this is the missing half.
 
 Tell them, in their own language, to open Telegram and do this once:
 
-> **Settings → My Account → Chat automation** → add **@lemma_telepath_bot**
+> **Mobile:** Settings → My Account → Chat automation
+> **Desktop:** Settings → Edit profile → Chat automation
+>
+> → add **@lemma_telepath_bot** and choose which chats it may access.
+
+The desktop path has the extra step, and naming only the phone one is how a
+person at a laptop opens *My Account*, finds no such row, and concludes the
+thing is broken. Give whichever matches what they are holding, or both.
 
 Add at most two of these, and only when they answer something the user is
 actually facing. Someone who has connected nothing yet does not need to hear
