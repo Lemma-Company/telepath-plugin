@@ -1,98 +1,83 @@
 ---
 name: connect-telegram
-description: Set up or repair the user's Telegram connection for Telepath, then answer what they actually asked. Use whenever they ask about their Telegram messages, chats, voice notes or files; mention Telegram, Телеграм or переписка; or when a Telepath tool is unavailable, asks for authentication, or reports no chats at all. Not for a search that simply found nothing — that is an ordinary empty result, not a setup problem.
+description: Set up or repair the user's Telegram connection for Telepath, then return to their original request. Use when they ask to connect Telegram or when Telepath tools are unavailable, require authentication, or return no chats. An empty search alone is not evidence of a connection problem. Not for developing or administering the Telepath service or its plugin listings.
 ---
 
 # Connecting Telegram to Telepath
 
-Telepath reads the user's own Telegram through a hosted MCP server. It needs two
-halves, and a half-connected setup looks exactly like an empty inbox — which is
-why this skill exists. Work out which half is missing, fix that one, then go back
-and do what the user originally asked.
+Check which step is incomplete and explain only that step, in the user's
+language. Signing in connects the assistant to a Telepath account. Telegram's
+Chat Automation connection lets Telepath receive new messages. These are
+separate steps; completing one does not prove the other is done.
 
-**First, make sure anything is actually broken.** If the Telepath tools work and
-return chats, this skill has nothing to do: use them and answer. A search that
-found nothing is an ordinary empty result — a connected archive with no match
-for *this* query — not a setup problem. Walking a working user through setup is
-worse than saying "nothing found", because it tells them something is wrong when
-nothing is.
+## 1. Check access from the assistant
 
-What does mean setup is incomplete: the tools are missing, they report an
-authentication error, or they report **no chats at all**. Zero chats is not a
-failed search; it means there is nothing to search.
+If available, call a cheap read tool such as `telegram_list_chats`. If the tools
+work and return chats, continue with the original request. An empty search for
+a person, date or phrase does not mean setup is broken.
 
-**And do not stop at "you're connected now."** The user asked a question. Setup
-is the detour, not the destination.
+If tools are unavailable or explicitly require sign-in, give the path for the
+client the user is using. Missing tools do not prove a connector is installed.
 
-## Step 1 — is the connector authenticated?
+- **Claude apps and Cowork with the Telepath plugin:** open **Customize →
+  Plugins → Telepath → Connectors**. If Telepath is **Not added**, add it from
+  this tab, then connect it. If **Not connected**, choose **Connect** and sign
+  in with Telegram. If **Connected**, try a read tool before suggesting any
+  setup changes. On Team or Enterprise, an organization Owner may need to add
+  the connector before members can sign in.
+- **Claude fallback:** if the plugin's connection flow fails, or the user has
+  no plugin, open https://claude.ai/directory/lemma-telepath in a browser,
+  connect Telepath and complete sign-in, then return to Claude. If that also
+  fails, ask for the displayed error and offer https://t.me/hellolemma rather
+  than repeatedly sending them through sign-in.
+- **Claude Code:** open `/mcp`, select the Telepath server and follow the
+  authentication prompt in the browser.
+- **Other clients:** use the client's connector authentication flow. The MCP
+  server URL is `https://telepath.lemma.company/mcp`. Do not give Claude menu
+  paths to someone using another assistant.
 
-Call a cheap Telepath tool, such as `telegram_list_chats`.
+Signing in identifies the user's Telepath account. It does not enable Telegram
+Chat Automation. When using Telegram on another device, return to the original
+browser window to finish sign-in. Retry the read tool after sign-in completes.
 
-**If the tool is missing, fails to connect, or reports a 401 / authentication
-error**, the connector is installed but not signed in. Say so briefly and give
-the path for where the user is:
+A timeout or server error alone is not evidence of missing authentication.
+If the connector says Connected but tools remain unavailable, ask for the error
+or suggest opening a new conversation; do not tell the user to delete a working
+connection or repeat login indefinitely.
 
-- **Claude app and Cowork**: send them to the connector's own listing,
-  https://claude.ai/directory/lemma-telepath → **Connect to Claude** → sign in
-  with Telegram. That is one button, and it works whether or not the plugin is
-  installed. Offer this first — the in-app route is five steps and is where
-  most people stop.
-  Only if they would rather stay in the app: **Customize → Plugins → Telepath
-  → Connectors**. The connector there reads **Not added** with a **Connect**
-  button; pressing it opens *Add custom connector* with the name and address
-  already filled in — **Continue**, then **Add** on the next screen, leaving
-  *Register automatically* selected as it is. The Telegram sign-in opens after
-  that. Nothing in the app ever points at that tab, which is why installing the
-  plugin on its own connects nothing.
-  On Team or Enterprise an organization Owner has to add the connector before
-  anyone can connect it.
-- **Claude Code**: run `/mcp`, pick **telepath**, and follow the browser.
+## 2. Check whether new messages can arrive
 
-Signing in is a Telegram login — there is no password to invent. It is what tells
-the server whose archive this is. Wait for the user to say they are done, then
-try the tool again.
+Zero chats can mean Telegram is not connected, no selected chat has received a
+new message yet, or no history has been imported. Do not claim disconnection
+solely from an empty archive or missing older messages.
 
-## Step 2 — is Telegram itself connected?
+Ask the user to check connection status in https://t.me/lemma_telepath_bot.
+Use any explicit connection status returned by available tools. If Telegram is
+not connected, direct them to the guide for their device:
+https://telepath.lemma.company/start#telegram
 
-A signed-in account with no bot added in Telegram has an empty archive. If the
-tool succeeds but returns no chats, or a search over a period the user says
-should have messages comes back empty, this is the missing half.
+The action is to add **@lemma_telepath_bot** in Telegram's **Chat Automation**
+settings, choose which private chats it may access, and save the connection.
+Menu paths vary by Telegram app and version; use the maintained guide instead
+of assuming the same path on every device. Telegram Premium is not required.
+If the menu is missing, ask which Telegram app/device they use and follow the
+guide's troubleshooting steps.
 
-Tell them, in their own language, to open Telegram and do this once:
+If Telegram is already connected, keep the existing connection. Explain the
+relevant next step:
 
-> **Mobile:** Settings → My Account → Chat automation
-> **Desktop:** Settings → Edit profile → Chat automation
->
-> → add **@lemma_telepath_bot** and choose which chats it may access.
+- **New messages:** only messages received after connection from selected chats
+  are available. Check the chat selection and wait for a new message there,
+  then retry the read tool.
+- **Older messages:** older history is not loaded automatically. Send `/import`
+  to the bot to add a Telegram Desktop export. Do not prescribe reconnection
+  to recover old history.
+- **Groups:** add the bot to the group to archive its new messages. Group
+  archiving is free. Share this only when the user asks about a group.
 
-The desktop path has the extra step, and naming only the phone one is how a
-person at a laptop opens *My Account*, finds no such row, and concludes the
-thing is broken. Give whichever matches what they are holding, or both.
+## 3. Resume the original request
 
-Add at most two of these, and only when they answer something the user is
-actually facing. Someone who has connected nothing yet does not need to hear
-about group chats and history imports — a wall of options at step one is how
-people give up.
-
-- It is available on **every** Telegram account — no Premium, no paid plan.
-  Worth saying up front: most people assume this costs money.
-- By default the bot gets **all** private chats. Anything excluded under
-  *Chats the bot can access* never reaches the server at all. Say this when
-  they ask what is shared, or hesitate about privacy.
-- Archiving starts **from that moment**. Say this when they ask about old
-  messages, or search for something older and find nothing. Then, and only
-  then, `/import` in the bot takes a Telegram Desktop export.
-- Groups are separate: add the bot to the group, then write one message there
-  yourself. Say this only when they ask about a group.
-- Step by step with pictures: https://telepath.lemma.company/start
-
-The bot sends a confirmation in Telegram once it connects. That is the signal
-the second half is done.
-
-## Step 3 — answer the original question
-
-As soon as the tools return real chats, carry out the request that started all
-this. If the user asked what Yulia wrote, resolve the name with
-`telegram_find_chat`, then read it with `telegram_get_messages`. Do not make them
-ask a second time.
-
+Once access works, do what the user originally asked. For a named person,
+resolve the chat with `telegram_find_chat`, then use `telegram_get_messages`.
+If no messages are available yet, explain that clearly and give the relevant
+next step. Never imply that sign-in alone has already imported their history.
