@@ -10,7 +10,7 @@
     {
       "name": "lemma-telepath",
       "source": "./",
-      "description": "Your Telegram, inside Claude. Search archived chats, read files and voice transcripts, and reply when permitted. After installing, open Telepath → Connectors → Add or Connect and sign in with Telegram. Follow the device setup guide to receive new messages. No Telegram Premium required."
+      "description": "Your Telegram, inside Claude. Catch up on conversations, find messages and files, and draft replies. Includes guided setup for the Telepath connector and Telegram Chat Automation."
     }
   ]
 }

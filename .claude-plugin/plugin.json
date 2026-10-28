@@ -1,8 +1,8 @@
 {
   "name": "lemma-telepath",
-  "displayName": "Telepath for Telegram",
-  "version": "1.2.6",
-  "description": "Your Telegram, inside Claude. Search archived chats, summarize conversations, read files and voice transcripts, and reply when permitted. Finish setup: open Telepath → Connectors → Add or Connect, then sign in with Telegram. To receive new messages, follow the setup guide for your device and choose which Telegram chats to share. Telegram Premium is not required.",
+  "displayName": "Telepath",
+  "version": "1.2.7",
+  "description": "Your Telegram, inside Claude. Catch up on conversations, search archived messages, read files and voice transcripts, and draft replies. Includes guided connection setup. Sending requires your authorization and Telegram permissions.",
   "author": {
     "name": "Lemma",
     "email": "hello@lemma.company",
